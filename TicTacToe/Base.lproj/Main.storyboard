@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board-tic-tac-toe" translatesAutoresizingMaskIntoConstraints="NO" id="jkp-9V-Lw8">
+                                <rect key="frame" x="0.66666666666665719" y="239" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Bak-At-o5L"/>
+                                    <constraint firstAttribute="height" constant="374" id="zKX-vM-i4j"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="haz-2y-Qs6">
+                                <rect key="frame" x="16" y="253.66666666666663" width="343" height="345"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-nV-x8y">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-TH-vvE">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="105" id="8ex-Y9-GJ3"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="QG8-jQ-Jop"/>
+                                                    <constraint firstAttribute="height" constant="105" id="VOH-PT-tEb"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="qoI-JQ-TMa"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZV-tl-lVM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-8s-p3P">
+                                                <rect key="frame" x="119" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="105" id="7n3-sK-Xg0"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="D5K-dq-6c9"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="Pqv-El-vsT"/>
+                                                    <constraint firstAttribute="width" constant="105" id="dlK-6a-DtM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xK8-Q9-5xZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACr-4n-c7B">
+                                                <rect key="frame" x="238" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="VKH-Rt-vim"/>
+                                                    <constraint firstAttribute="height" constant="105" id="g3p-Lv-Ytc"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="het-z2-OwK"/>
+                                                    <constraint firstAttribute="width" constant="105" id="zy0-JV-qdq"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KkN-qN-Ks0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-w4-q9g">
+                                        <rect key="frame" x="0.0" y="120.00000000000003" width="343" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDg-Q3-KUK">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="105" id="2fX-P8-Lm4"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="Gd0-8c-waH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="OcP-kK-VUH"/>
+                                                    <constraint firstAttribute="width" constant="105" id="pHf-Ys-ZUW"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7XJ-62-Uw1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-n4-E1R">
+                                                <rect key="frame" x="119" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="105" id="RjP-xP-HJj"/>
+                                                    <constraint firstAttribute="height" constant="105" id="Y2l-gz-h3C"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxm-GM-JEN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKl-ea-Jm5">
+                                                <rect key="frame" x="238" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="2nE-jy-oHO"/>
+                                                    <constraint firstAttribute="width" constant="105" id="E6l-Tw-TFx"/>
+                                                    <constraint firstAttribute="height" constant="105" id="Jxz-IA-Vrk"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="f3y-hZ-dJy"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXq-Ka-YQe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="09a-mW-Teo">
+                                        <rect key="frame" x="0.0" y="240" width="343" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiH-2p-a5o">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="9r6-Yz-mbb"/>
+                                                    <constraint firstAttribute="height" constant="105" id="FSi-Lc-F6U"/>
+                                                    <constraint firstAttribute="width" constant="105" id="J5s-GC-Rcc"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="mrF-cv-LjD"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0RS-Yg-bPG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AS-7i-FQx">
+                                                <rect key="frame" x="119" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="105" id="KH8-jL-zaT"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="TGu-05-iNB"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="lht-5b-rzu"/>
+                                                    <constraint firstAttribute="width" constant="105" id="v08-wP-ocN"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jjw-ii-kNK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-As-RHC">
+                                                <rect key="frame" x="238" y="0.0" width="105" height="105"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="4ly-NR-WVQ"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="105" id="KXX-ob-PI9"/>
+                                                    <constraint firstAttribute="height" constant="105" id="XZB-OJ-p2x"/>
+                                                    <constraint firstAttribute="width" constant="105" id="la9-gf-pnC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aC1-xl-vaW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psj-f4-jxE">
+                                <rect key="frame" x="6" y="172.33333333333334" width="363.33333333333331" height="41.333333333333343"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="C">
+                                        <attributes>
+                                            <color key="NSColor" red="0.052610479295253754" green="0.96659368276596069" blue="0.26453322172164917" alpha="0.9990234375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="R">
+                                        <attributes>
+                                            <color key="NSColor" red="0.059320606291294098" green="0.96214586496353149" blue="0.57999294996261597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="OS">
+                                        <attributes>
+                                            <color key="NSColor" red="0.048454321920871735" green="0.96489614248275757" blue="0.60951715707778931" alpha="0.9997711181640625" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S">
+                                        <attributes>
+                                            <color key="NSColor" red="0.056949831545352936" green="0.96441096067428589" blue="0.85987120866775513" alpha="0.9990234375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="E">
+                                        <attributes>
+                                            <color key="NSColor" red="0.08780369907617569" green="0.75683927536010742" blue="0.94950956106185913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91764283180236816" green="0.55439490079879761" blue="0.82366758584976196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.060248084366321564" green="0.79443472623825073" blue="0.96303278207778931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="H">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92405205965042114" green="0.61272865533828735" blue="0.85339397192001343" alpha="0.999755859375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="A">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91755074262619019" green="0.54654228687286377" blue="0.83484524488449097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="V">
+                                        <attributes>
+                                            <color key="NSColor" red="0.12569636106491089" green="0.78374111652374268" blue="0.94017452001571655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="E">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14269110560417175" green="0.92186868190765381" blue="0.93583637475967407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" W">
+                                        <attributes>
+                                            <color key="NSColor" red="0.050453662872314453" green="0.96467524766921997" blue="0.79520374536514282" alpha="0.99945068359375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O">
+                                        <attributes>
+                                            <color key="NSColor" red="0.016365790739655495" green="0.98630994558334351" blue="0.74738532304763794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="N">
+                                        <attributes>
+                                            <color key="NSColor" red="0.073767967522144318" green="0.95779424905776978" blue="0.34771788120269775" alpha="0.99981689453125" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.060169167816638947" green="0.96158498525619507" blue="0.41677838563919067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH2-9Z-FMb">
+                                <rect key="frame" x="91" y="44" width="193.33333333333337" height="116"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="X">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="90" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="&amp;">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="60" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="90" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-6X-64c">
+                                <rect key="frame" x="6" y="172.33333333333334" width="363.33333333333331" height="41.333333333333343"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="N">
+                                        <attributes>
+                                            <color key="NSColor" red="0.052610479295253754" green="0.96659368276596069" blue="0.26453322172164917" alpha="0.9990234375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O">
+                                        <attributes>
+                                            <color key="NSColor" red="0.059320606291294098" green="0.96214586496353149" blue="0.57999294996261597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="UG">
+                                        <attributes>
+                                            <color key="NSColor" red="0.048454321920871735" green="0.96489614248275757" blue="0.60951715707778931" alpha="0.9997711181640625" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="H">
+                                        <attributes>
+                                            <color key="NSColor" red="0.056949831545352936" green="0.96441096067428589" blue="0.85987120866775513" alpha="0.9990234375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="T">
+                                        <attributes>
+                                            <color key="NSColor" red="0.08780369907617569" green="0.75683927536010742" blue="0.94950956106185913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="S">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91764283180236816" green="0.55439490079879761" blue="0.82366758584976196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.060248084366321564" green="0.79443472623825073" blue="0.96303278207778931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="H">
+                                        <attributes>
+                                            <color key="NSColor" red="0.92405205965042114" green="0.61272865533828735" blue="0.85339397192001343" alpha="0.999755859375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="A">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91755074262619019" green="0.54654228687286377" blue="0.83484524488449097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="V">
+                                        <attributes>
+                                            <color key="NSColor" red="0.12569636106491089" green="0.78374111652374268" blue="0.94017452001571655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="E">
+                                        <attributes>
+                                            <color key="NSColor" red="0.14269110560417175" green="0.92186868190765381" blue="0.93583637475967407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" W">
+                                        <attributes>
+                                            <color key="NSColor" red="0.050453662872314453" green="0.96467524766921997" blue="0.79520374536514282" alpha="0.99945068359375" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="O">
+                                        <attributes>
+                                            <color key="NSColor" red="0.016365790739655495" green="0.98630994558334351" blue="0.74738532304763794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="N">
+                                        <attributes>
+                                            <color key="NSColor" red="0.073767967522144318" green="0.95779424905776978" blue="0.34771788120269775" alpha="0.99981689453125" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.060169167816638947" green="0.96158498525619507" blue="0.41677838563919067" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="31" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeZ-rR-euE">
+                                <rect key="frame" x="115" y="633" width="145" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="r0B-1d-Ked"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="25"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Play Again!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpm-kH-Fkm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CROSSES HAVE WON!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-r3-bAv">
+                                <rect key="frame" x="7" y="173.33333333333334" width="361.33333333333331" height="39.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="31"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOUGHTS HAVE WON!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud9-Gb-lHE">
+                                <rect key="frame" x="7" y="173.33333333333334" width="361.33333333333331" height="39.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="31"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK0-A5-grT">
+                                <rect key="frame" x="91" y="44" width="193.33333333333337" height="116"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="90"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="haz-2y-Qs6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="253.66999999999999" id="0Bb-ua-fn0"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7nU-4p-0q0"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="centerY" secondItem="Psj-f4-jxE" secondAttribute="centerY" id="93u-uF-IDA"/>
+                            <constraint firstItem="haz-2y-Qs6" firstAttribute="top" secondItem="Psj-f4-jxE" secondAttribute="bottom" constant="40" id="9L6-a6-DgA"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="top" secondItem="Psj-f4-jxE" secondAttribute="top" id="Aah-uz-rIz"/>
+                            <constraint firstItem="CH2-9Z-FMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Chq-iF-Pqy"/>
+                            <constraint firstItem="jkp-9V-Lw8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DrQ-gJ-3pe"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="bottom" secondItem="ud9-Gb-lHE" secondAttribute="bottom" id="HG6-WH-CYE"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="trailing" secondItem="ud9-Gb-lHE" secondAttribute="trailing" id="Ke2-7K-Yuc"/>
+                            <constraint firstItem="XeZ-rR-euE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KqR-I1-uI4"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="leading" secondItem="CH2-9Z-FMb" secondAttribute="leading" id="MhK-dG-pIj"/>
+                            <constraint firstItem="CH2-9Z-FMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QlW-kH-7EC"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="centerX" secondItem="CH2-9Z-FMb" secondAttribute="centerX" id="S7p-8H-Xr6"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="bottom" secondItem="CH2-9Z-FMb" secondAttribute="bottom" id="UIT-Xf-EgV"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="centerX" secondItem="Psj-f4-jxE" secondAttribute="centerX" id="Urm-PL-2sx"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="centerY" secondItem="CH2-9Z-FMb" secondAttribute="centerY" id="V7m-L3-6dr"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="trailing" secondItem="Psj-f4-jxE" secondAttribute="trailing" id="WoQ-ec-6eT"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="bottom" secondItem="Psj-f4-jxE" secondAttribute="bottom" id="Wp6-MZ-XGH"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="centerY" secondItem="ud9-Gb-lHE" secondAttribute="centerY" id="ZYo-qj-6du"/>
+                            <constraint firstItem="Psj-f4-jxE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cbQ-wM-tTD"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="top" secondItem="CH2-9Z-FMb" secondAttribute="top" id="frP-gS-5ao"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="centerX" secondItem="ud9-Gb-lHE" secondAttribute="centerX" id="fts-D3-L48"/>
+                            <constraint firstItem="pXf-6X-64c" firstAttribute="leading" secondItem="Psj-f4-jxE" secondAttribute="leading" id="kRn-wn-cI3"/>
+                            <constraint firstItem="jkp-9V-Lw8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="239" id="mfR-hm-clV"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="top" secondItem="ud9-Gb-lHE" secondAttribute="top" id="qRm-nv-ic9"/>
+                            <constraint firstItem="SK0-A5-grT" firstAttribute="trailing" secondItem="CH2-9Z-FMb" secondAttribute="trailing" id="qgs-si-rG3"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="centerY" secondItem="Psj-f4-jxE" secondAttribute="centerY" id="roY-FY-ORa"/>
+                            <constraint firstItem="zjb-r3-bAv" firstAttribute="leading" secondItem="ud9-Gb-lHE" secondAttribute="leading" id="sVa-NJ-6UC"/>
+                            <constraint firstItem="XeZ-rR-euE" firstAttribute="top" secondItem="jkp-9V-Lw8" secondAttribute="bottom" constant="20" id="w7g-uC-Q50"/>
+                            <constraint firstItem="haz-2y-Qs6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wvf-Za-zc2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="boardColor" destination="jkp-9V-Lw8" id="kNj-1m-Edx"/>
+                        <outlet property="btn" destination="9ZQ-n4-E1R" id="h9l-jn-iil"/>
+                        <outlet property="playAgainBtn" destination="XeZ-rR-euE" id="dkI-AG-udV"/>
+                        <outlet property="winnerLabelBlack" destination="zjb-r3-bAv" id="ZSF-Hh-SWE"/>
+                        <outlet property="winnerLabelBlackN" destination="ud9-Gb-lHE" id="h8X-ic-t55"/>
+                        <outlet property="winnerLabelColor" destination="Psj-f4-jxE" id="eui-Ws-g5E"/>
+                        <outlet property="winnerLabelColorN" destination="pXf-6X-64c" id="H3U-Rw-bjL"/>
+                        <outlet property="xno" destination="CH2-9Z-FMb" id="aOi-Zh-5uu"/>
+                        <outlet property="xnoBlack" destination="SK0-A5-grT" id="yWo-Q6-tqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="78.325123152709367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board-tic-tac-toe" width="601" height="601"/>
+    </resources>
+</document>
